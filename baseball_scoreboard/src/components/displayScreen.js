@@ -10,6 +10,7 @@ const DisplayScreenContainer = styled.div`
 
     min-width: 35px;
     min-height: 35px;
+    margin: 5px;
 
     border: 1px dashed orange;
 `;
