@@ -19,8 +19,8 @@ function App() {
     <APP_CONTAINER className="App">
       <h2>ENTER HERE</h2>
 
-      <Dashboard />
       <Display />
+      <Dashboard />
 
     </APP_CONTAINER>
   );
