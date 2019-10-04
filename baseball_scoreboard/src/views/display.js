@@ -11,9 +11,9 @@ const DisplayContainer = styled.div`
 `;
 // - Component to Export - // 
 function Display(params) {
-    console.log('DISPLAY params', params)
-    console.log('-*- Strikes -*-',params.strikes)
-    console.log('-*- Balls -*-',params.balls)
+    // console.log('DISPLAY params', params)
+    // console.log('-*- Strikes -*-',params.strikes)
+    // console.log('-*- Balls -*-',params.balls)
     // const [strikes, setStrikes] = useState(0)
     // const [balls, setBalls] = useState(0)
     // -*- //

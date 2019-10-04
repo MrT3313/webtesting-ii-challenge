@@ -15,18 +15,17 @@ const StyledButton = styled.button`
 `;
 // - Component to Export - // 
 function Button(params) {
-    console.log('INSIDE BUTTON')
+    // console.log('INSIDE BUTTON')
     console.log('params', params)
-    console.log('params.updateFunction', params.updateFunction)
+    // console.log('params.updateFunction', params.updateFunction)
     // -*- //
 
     const handleClick = e => {
         console.log('BUTTON CLICKED')
         e.preventDefault()
-        params.updateFunction()
+        params.updateFunction(params.buttonType)
     }
-        
-
+    
     return (
         <StyledButton
             onClick={handleClick}

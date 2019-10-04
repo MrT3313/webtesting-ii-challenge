@@ -16,7 +16,7 @@ const DisplayScreenContainer = styled.div`
 `;
 // - Component to Export - // 
 function DisplayScreen(params) {
-    console.log('params', params)
+    // console.log('params', params)
     // -*- //
     return (
         <DisplayScreenContainer>

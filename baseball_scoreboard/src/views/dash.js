@@ -11,14 +11,20 @@ const DashboardContainer = styled.div`
 `;
 // - Component to Export - // 
 function Dashboard(params) {
-    console.log(' DASHBAORD params', params)
-    console.log(' buttonFunctions', params.buttonFunctions)
-    console.log('-*- Strikes -*-',params.strikes)
-    console.log('-*- Balls -*-',params.balls)
+    // console.log(' DASHBAORD params', params)
+    // console.log(' buttonFunctions', params.buttonFunctions)
+    // console.log('-*- Strikes -*-',params.strikes)
+    // console.log('-*- Balls -*-',params.balls)
     // -*- //
     // -*- //
     return (
         <DashboardContainer>
+            <Button 
+                pitchCount={params} 
+                buttonText={'Ball'}
+                buttonType={'ball'}     
+                updateFunction={params.buttonFunctions.handleBall}
+            />
             <Button 
                 pitchCount={params} 
                 buttonText={'Strike!'}
@@ -27,27 +33,21 @@ function Dashboard(params) {
             />
             <Button 
                 pitchCount={params} 
-                buttonText={'Ball'}
-                buttonType={'ball'}     
-                updateFunction={params.buttonFunctions.handleBall}
-                />
-            {/* <Button 
-                pitchCount={params} 
                 buttonType={'foul'}     
                 buttonText={'Foul'}
+                // updateFunction={params.buttonFunctions.handleFoul}
                 updateFunction={params.buttonFunctions.handleStrike}
-                />
+            />
             <Button 
                 pitchCount={params} 
                 buttonType={'hit'}     
                 buttonText={'HIT!'}
                 updateFunction={params.buttonFunctions.handleClearCount}
                 
-            /> */}
+            />
         </DashboardContainer>
     )
 }
-
 
 // - Exports - // 
 export default Dashboard

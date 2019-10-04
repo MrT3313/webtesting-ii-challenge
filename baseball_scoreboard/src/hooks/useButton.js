@@ -2,23 +2,73 @@
 import {useState} from 'react'
 
 // - CUSTOM HOOK - //
-// const useButton = (key, initialValue) => {
 const useButton = (key, initialValue) => {
-    console.log('INSIDE USE BUTTON')
-    console.log('DATA PASSED TO useButton', key, initialValue)
-    // -*- //
     const [value, setValue] = useState(parseInt(initialValue))
-    console.log(value)
-    // console.log(typeof value)
+    // console.log('-*- useButton hookState -*-',value)
+    console.log('-- * --',key)
+    // -- * -- //
+        let updatedValue = undefined
+    // -- * -- //
 
-    let updatedValue = value +1 
-        console.log(updatedValue)
-    
-    const handleChanges = e => {
+        // if(key === 'strike') {
+        //     if (value < 2) {
+        //         updatedValue = value + 1 
+        //     } else {
+        //         updatedValue = 0
+        //     }
+        // } 
+        // if(key === 'foul') {
+        //     if (value < 2) {
+        //         updatedValue = value + 1 
+        //     } else {
+        //         updatedValue = value
+        //     }
+        // } 
+        // if(key === 'ball') {
+        //     if (value < 3) {
+        //         updatedValue = value + 1 
+        //     } else {
+        //         updatedValue = 0
+        //     }
+        // } 
+        
+    // -- * -- //
+    const handleChanges = buttonType => {
+        console.log('!!! UPDATED VALUE !!!', updatedValue)
+        console.log('!!! buttonType !!!', buttonType)
+        // -- * -- //
+            switch (buttonType) {
+                case 'strike':
+                    if (value < 2) {
+                        updatedValue = value + 1
+                    } else {
+                        updatedValue = 0
+                    }
+                    break;
+                case 'foul':
+                    if (value < 2) {
+                        updatedValue = value + 1
+                    } else if (value === 2) {
+                        updatedValue = 2
+                    } else {
+                        alert('error')    
+                    }
+                    break;
+                case 'ball':
+                    if (value < 3) {
+                        updatedValue = value + 1
+                    } else {
+                        updatedValue = 0
+                    }
+                    break;
+                default:
+                    alert('error')
+                    break;
+            }
+
+        // -- * -- //
         setValue(updatedValue)
     }
-    console.log(value)
-
 return [value, handleChanges, setValue]
 }
 
